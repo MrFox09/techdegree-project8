@@ -14,6 +14,38 @@ function asyncHandler(cb){
     };
   }
 
+// Show a full list of the book entries
+
+  router.get("/books", asyncHandler( async (req,res) => {
+    const book = await Book.findAll({order:[["createdAt" , "desc"]]});
+    //console.log( book.map(book => book.toJSON()) );
+
+    res.render("index", {book});
+
+
+  }));
+
+  // Show the create a new Book form
+
+  router.get("/books/new", asyncHandler( async (req,res) => {    
+
+    res.render("new-book");
+
+  }));
+
+    // Posts a new book into the Database
+
+    router.post("/books/new", asyncHandler( async (req,res) => {        
+
+      const newBook = await Book.create(req.body);
+
+      res.redirect("/");
+  
+    }));
+
+
+
+
 
 
 
