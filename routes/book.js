@@ -69,7 +69,8 @@ function asyncHandler(cb){
       } else {
 
         const err = new Error ();
-        next(err);
+        next(err); 
+        
        
       }
       
