@@ -2,8 +2,10 @@ doctype html
 html
   head
     title Books
-    link(href='../static/stylesheets/style.css', rel='stylesheet')
-    script(src='js/script.js')
+    block head
+      link(href='../static/stylesheets/style.css', rel='stylesheet')
+      script(src='../static/js/script.js', defer='')
 
   body
-  block content
+    div.wrapper
+     block content

@@ -2,8 +2,11 @@ extends layout.pug
 
 block content
     h1 Books
-    p
-      a.button(href='/books/new') Create New Book
+    div.newBookButton
+      p
+        a.button(href='/') Home
+      p  
+        a.button(href='/books/new') Create New Book
     table
       thead
         tr
