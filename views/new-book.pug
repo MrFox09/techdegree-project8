@@ -1,6 +1,8 @@
 extends layout.pug
 
 block content
+    include updateError
+
     h1 New Book
     form(action='/books/new' , method = 'post')
       p
