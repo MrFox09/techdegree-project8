@@ -47,17 +47,17 @@ const search = (input, listName) => {
   // loop through the List which we want to search through and set everything invisible except the first row  
     for (let i = 0; i < listName.length; i++) {
         if (i===0) {
-            listItem[i].style.display = '';
+            listName[i].style.display = '';
             
         } else {
-            listItem[i].style.display = 'none';
+            listName[i].style.display = 'none';
             
         }
     
   // takes the input and search for matches, if there is a match set the style to visible 
       if (input.value.length != 0 && listName[i].textContent.toLowerCase().includes(input.value.toLowerCase())) {
-        listItem[i].style.display = '';
-        resultsArray.push(listItem[i]);
+        listName[i].style.display = '';
+        resultsArray.push(listName[i]);
 
         
 
@@ -76,6 +76,7 @@ const search = (input, listName) => {
   
     // remove the inital div what was made by the first call of appendPageLinks function
     parentDiv.removeChild(paginationDiv);
+    
     // call the functions to show search results an append links
     showPage(resultsArray, 1);
     appendPageLinks(resultsArray);
