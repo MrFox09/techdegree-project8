@@ -46,13 +46,10 @@ const search = (input, listName) => {
   
   // loop through the List which we want to search through and set everything invisible except the first row  
     for (let i = 0; i < listName.length; i++) {
-        if (i===0) {
-            listName[i].style.display = '';
+      
+     listName[i].style.display = 'none';
             
-        } else {
-            listName[i].style.display = 'none';
-            
-        }
+  
     
   // takes the input and search for matches, if there is a match set the style to visible 
       if (input.value.length != 0 && listName[i].textContent.toLowerCase().includes(input.value.toLowerCase())) {
