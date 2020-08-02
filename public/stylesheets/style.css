@@ -1,6 +1,7 @@
 body {
   padding: 10px 50px 50px;
   font: 18px "Garamond", serif;
+  background-color: #4b5d67;
 }
 
 a {
@@ -85,6 +86,8 @@ input {
   border-radius: 2px;
   border-color: #E7E7E7;
   transition: 0.4s;
+  margin-top: 22px;
+  margin-right:10px
 }
 
 input[type=text] {
@@ -95,3 +98,56 @@ input[type=text] {
 .error {
   color: rgb(236, 15, 15);
 }
+
+/*Added extra Styles*/
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Pagination part*/
+
+ .pagination{
+  width:70%;
+  text-align: center;
+}
+ 
+  .pagination li{
+    display: inline;
+  }
+
+    .pagination li a{
+      border: 1px solid #eaeaea;
+      border-radius: 5px;
+      padding: 3px 8px;
+      text-decoration: none;
+      color: #4ba6c3;
+    }
+
+    .pagination li a.active,
+    .pagination li a:hover{
+      background-color: #4ba6c3;
+      color: #fff;
+    }
+
+
+/* newBookButton div styles for the search field and the buttons at the top */
+
+.newBookButton {
+
+  display: inline-flex;
+  padding-left:5px ;
+
+}
+
+.newBookButton > p {
+  padding:10px
+}
+
+
+
+
+
+

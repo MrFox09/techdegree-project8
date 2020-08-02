@@ -126,6 +126,7 @@ const search = (input, listName) => {
     if (i === 0) {
       a.className = 'active';
     }
+  
     li.appendChild(a);
     ul.appendChild(li);
   }
