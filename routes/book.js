@@ -92,7 +92,7 @@ function asyncHandler(cb){
       } catch (error) {
         if(error.name === "SequelizeValidationError") {
           book = await Book.build(req.body);
-          book.id = req.params.id; // make sure correct book gets updated
+          book.id = req.params.id;
           res.render("update-book", { book, errors: error.errors });
         } else {
           throw error;

@@ -1,8 +1,8 @@
 
 // Global variables to store the ListItems and set the total number which will be shown on the page
 
-const listItem = document.getElementsByTagName('tr');
-const maxItems = 11; // 11 because the first row is for the headings
+const listItem = document.querySelectorAll('tbody tr');
+const maxItems = 10; 
 let resultsArray = []; // stores the search results
 
 
@@ -171,10 +171,9 @@ input.addEventListener('keypress',(e)=>{
 
  
   
-
+// initial launch of the pagination
 
 appendPageLinks(listItem);
 showPage(listItem, 1);
 
 
-console.log(listItem);
