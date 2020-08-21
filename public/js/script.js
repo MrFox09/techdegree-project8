@@ -44,7 +44,7 @@ const search = (input, listName) => {
     
     let resultsArray = [] ;
   
-  // loop through the List which we want to search through and set everything invisible except the first row  
+  // loop through the List which we want to search through and set everything invisible 
     for (let i = 0; i < listName.length; i++) {
       
      listName[i].style.display = 'none';
@@ -67,9 +67,7 @@ const search = (input, listName) => {
         table.appendChild(noResultsDiv);
       
    
-    } else {
-    
-    }
+    } 
   
     // remove the inital div what was made by the first call of appendPageLinks function
     parentDiv.removeChild(paginationDiv);
